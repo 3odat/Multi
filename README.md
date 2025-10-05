@@ -1,15 +1,16 @@
 # Sensors and Visual Camera and Map 
 
-Activate the environment
+### Activate the environment
 ```
 source ~/px4/bin/activate
 ```
-Run the codes
+### Run the codes
+```
 cd ~/agent
 python3 multi_drone_visual_api_complete_v3.py --port 8088
 python3 sensors_service_multi.py
 multi_drone_map_server.py
-```
+
 ```
 Check the detection
 ### Detection API
