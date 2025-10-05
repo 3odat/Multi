@@ -1,8 +1,29 @@
-# Sensors and Visual Cameraa
+# Sensors and Visual Camera and map direct
 
-python3 multi_drone_visual_api_complete_v3.py --port 8088
-python3 sensors_service_multi.py
+- python3 multi_drone_visual_api_complete_v3.py --port 8088
+- python3 sensors_service_multi.py
+- multi_drone_map_server.py
+============================================================================
+### Detection API
+http://localhost:8088/drone2/scene
+http://localhost:8088/drone1/scene
 
+### Video
+http://localhost:8088/drone1/video.mjpg
+http://localhost:8088/drone2/video.mjpg
+
+### Sensors API
+http://localhost:8001/sensors
+http://localhost:8001/sensors/1
+http://localhost:8001/sensors/2
+
+### MAP
+Multi:
+http://localhost:8002/fleet?ids=1,2
+
+Singles:
+http://localhost:8002/map1
+http://localhost:8002/map1
 
 ============================================================================
 
