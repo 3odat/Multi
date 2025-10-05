@@ -1,0 +1,59 @@
+# Clock (GZ -> ROS)
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# ---------- Drone 1 (x500_depth_0) ----------
+- ros_topic_name: "/drone1/camera"
+  gz_topic_name: "/world/default/model/x500_depth_0/link/OakD-Lite/base_link/sensor/IMX214/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+
+- ros_topic_name: "/drone1/camera_info"
+  gz_topic_name: "/world/default/model/x500_depth_0/link/OakD-Lite/base_link/sensor/IMX214/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+
+- ros_topic_name: "/drone1/depth_camera"
+  gz_topic_name: "/world/default/model/x500_depth_0/link/OakD-Lite/base_link/sensor/StereoOV7251/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+
+- ros_topic_name: "/drone1/depth_points"
+  gz_topic_name: "/world/default/model/x500_depth_0/link/OakD-Lite/base_link/sensor/StereoOV7251/depth_image/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+
+- ros_topic_name: "/drone1/imu"
+  gz_topic_name: "/world/default/model/x500_depth_0/link/base_link/sensor/imu_sensor/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+
+# ---------- Drone 2 (x500_depth_1) ----------
+- ros_topic_name: "/drone2/camera"
+  gz_topic_name: "/world/default/model/x500_depth_1/link/OakD-Lite/base_link/sensor/IMX214/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+
+- ros_topic_name: "/drone2/camera_info"
+  gz_topic_name: "/world/default/model/x500_depth_1/link/OakD-Lite/base_link/sensor/IMX214/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+
+- ros_topic_name: "/drone2/depth_camera"
+  gz_topic_name: "/world/default/model/x500_depth_1/link/OakD-Lite/base_link/sensor/StereoOV7251/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+
+- ros_topic_name: "/drone2/depth_points"
+  gz_topic_name: "/world/default/model/x500_depth_1/link/OakD-Lite/base_link/sensor/StereoOV7251/depth_image/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+
+- ros_topic_name: "/drone2/imu"
+  gz_topic_name: "/world/default/model/x500_depth_1/link/base_link/sensor/imu_sensor/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+
