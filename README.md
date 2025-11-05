@@ -12,6 +12,8 @@ python3 sensors_service_multi.py
 multi_drone_map_server.py
 
 ```
+
+
 Check the detection
 ### Detection API
 ```
@@ -150,3 +152,22 @@ cd ~/agent/tmp && ros2 run ros_gz_bridge parameter_bridge \
 
  # For Single drone bridge the topi
 ros2 run ros_gz_bridge parameter_bridge /clock@rosgraph_msgs/msg/Clock@gz.msgs.Clock /camera@sensor_msgs/msg/Image@gz.msgs.Image /camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo /depth_camera@sensor_msgs/msg/Image@gz.msgs.Image /depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked /world/default/model/x500_depth_0/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
+
+```
+python app.py   --sensors "id=1,url=udp://:14540,grpc=50051"   --sensors "id=2,url=udp://:14541,grpc=50052"   --drone "name=drone1,rgb=/drone1/camera,depth=/drone1/depth_camera,info=/drone1/camera_info,sensors=http://localhost:8090/sensors/1"   --drone "name=drone2,rgb=/drone2/camera,depth=/drone2/depth_camera,info=/drone2/camera_info,sensors=http://localhost:8090/sensors/2"   --host 0.0.0.0 --port 8090
+
+http://localhost:8090/healthz
+http://localhost:8090/readyz
+http://localhost:8090/metrics
+http://localhost:8090/sensors
+http://localhost:8090/sensors/1 (and /2)
+http://localhost:8090/perception/scene?drone=drone1
+http://localhost:8090/perception/history?drone=drone1
+http://localhost:8090/fusion/scene
+http://localhost:8090/stream/scene?drone=drone1&hz=10
+http://localhost:8090/video.mjpg?drone=drone1
+
+```
+
+
+
