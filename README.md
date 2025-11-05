@@ -143,8 +143,7 @@ http://localhost:8088/drone1/take_photo (saved as images/drone1_photo_*.jpg), sa
 ============================================================================
 
  # Multi-Drone 
-cd ~/agent/tmp
-ros2 run ros_gz_bridge parameter_bridge \
+cd ~/agent/tmp && ros2 run ros_gz_bridge parameter_bridge \
   --ros-args -p config_file:=$HOME/agent/tmp/bridge2.yaml
 
 ============================================================================
